@@ -6,7 +6,6 @@ const readline = require("readline").createInterface({
   output: process.stdout,
 });
 const path = require("path");
-const { setTimeout } = require("timers/promises");
 
 let projectName = process.argv[2] || "";
 
@@ -84,7 +83,7 @@ async function handleSuccessfulInput(name) {
         // Set the public file directory
         app.use(express.static(path.join(__dirname, '/public')));
         
-        // let port = 3000;
+        
         // Set up Mongoose connection
         mongoose.connect('mongodb://127.0.0.1:27017/<CollectionName>')
             .then(() => {
@@ -101,7 +100,7 @@ async function handleSuccessfulInput(name) {
         });
         
         
-        
+        let port = <port>;
         app.listen(port, () => {
             console.log("Listening on " + port);
         });
@@ -141,9 +140,9 @@ async function handleSuccessfulInput(name) {
                 
                 Website Name: 
                 Website URL: 
-                Website Author: Tabitha Turton
-                Author URL: tabithaturton.com
-                Copyright 2017. All Rights Reserved.
+                Website Author: 
+                Author URL: 
+                Copyright 2024. All Rights Reserved.
                 
                 Color Guide
                 ***************
